@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Новини 2026 — Свіжі події України та світу</title>
+  <meta name="description" content="Найсвіжіші новини України та світу в зручному форматі. Оновлюється щогодини."/>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter (сучасний і чистий шрифт) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0f0f0f; }
+    ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen">
+
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        Новини<span class="text-gray-400 dark:text-gray-500">.live</span>
+      </a>
+
+      <div class="flex items-center gap-6">
+        <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path id="sun" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            <path id="moon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero / Featured -->
+  <section class="relative pt-12 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-950">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight animate-fade-in">
+          Головні новини <span class="text-blue-600 dark:text-blue-400">прямо зараз</span>
+        </h1>
+        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          Останні події, аналітика та ексклюзиви — все в одному місці
+        </p>
+      </div>
+
+      <!-- Featured Card -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 group relative overflow-hidden rounded-2xl shadow-2xl animate-fade-in">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=2400" 
+               alt="Featured" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-8">
+            <span class="inline-block px-4 py-1 bg-red-600 text-white text-sm font-medium rounded-full mb-4">Гаряче</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-white leading-tight">
+              Війна, економіка та нова хвиля мобілізації: що чекає Україну в 2026
+            </h2>
+            <p class="mt-4 text-gray-200 text-lg">Оновлено 5 хвилин тому</p>
+          </div>
+        </div>
+
+        <!-- Small featured cards -->
+        <div class="space-y-6">
+          <div class="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in" style="animation-delay: 0.1s;">
+            <img src="https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80&w=800" alt="" class="w-full h-48 object-cover group-hover:scale-105 transition-transform"/>
+            <div class="p-5">
+              <h3 class="font-semibold text-xl line-clamp-2">Європейський союз виділив рекордний пакет допомоги</h3>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">2 год тому</p>
+            </div>
+          </div>
+
+          <div class="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in" style="animation-delay: 0.2s;">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800" alt="" class="w-full h-48 object-cover group-hover:scale-105 transition-transform"/>
+            <div class="p-5">
+              <h3 class="font-semibold text-xl line-clamp-2">Новий iPhone 17 — перші реальні фото та характеристики</h3>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">4 год тому</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Grid -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold mb-12 text-center">Останні новини</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Повторювані карти новин (можна додати більше) -->
+        <div class="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fade-in">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"/>
+          <div class="p-6">
+            <span class="text-blue-600 dark:text-blue-400 text-sm font-medium">Політика</span>
+            <h3 class="mt-2 text-xl font-semibold line-clamp-2">Зеленський анонсував нові санкції проти РФ</h3>
+            <p class="mt-3 text-gray-600 dark:text-gray-400 line-clamp-3">Деталі чергового пакету обмежень, який може змінити хід війни...</p>
+            <div class="mt-4 flex items-center text-sm text-gray-500 dark:text-gray-400">
+              <span>7 хв тому</span>
+              <span class="mx-2">•</span>
+              <span>Читати 4 хв</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Додай ще 5–8 таких карт за бажанням, копіюючи блок вище -->
+
+      </div>
+
+      <div class="text-center mt-16">
+        <button class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-full text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl">
+          Завантажити ще новини
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-lg">Новини 2026 © 2026 Вадим. Зроблено з ❤️ у Дрогобичі</p>
+      <p class="mt-2 text-sm">Це демо-сайт. Реальні новини можна підтягувати з API (NewsAPI, GNews тощо)</p>
+    </div>
+  </footer>
+
+  <!-- Dark mode toggle script -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    // Check saved preference or system preference
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+      document.getElementById('moon').classList.remove('hidden');
+      document.getElementById('sun').classList.add('hidden');
+    } else {
+      html.classList.remove('dark');
+      document.getElementById('sun').classList.remove('hidden');
+      document.getElementById('moon').classList.add('hidden');
+    }
+
+    toggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      if (html.classList.contains('dark')) {
+        localStorage.theme = 'dark';
+        document.getElementById('moon').classList.remove('hidden');
+        document.getElementById('sun').classList.add('hidden');
+      } else {
+        localStorage.theme = 'light';
+        document.getElementById('sun').classList.remove('hidden');
+        document.getElementById('moon').classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>
